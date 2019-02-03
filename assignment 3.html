@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset = "UTF-8">
+
+<title>
+Online Videos
+</title>
+
+<body>
+	
+	<div id="section1" align="center" style="margin-bottom:0;">
+	<h1>Awesome Videos Online</h1>
+	<img src="logo.png" width="50px">
+		<div align="right">
+			Background:
+			<button type="button" onclick="red()" style="background-color: red;">R</button>
+            <button type="button" onclick="original()" style="background-color: white;">O</button>
+		</div>
+	</div>
+	
+	<div id="section2" align="center" style="margin-bottom:0;">
+		<h1> Video Of The Week!!!</h1>
+		<video id="v1" width="420px">
+			<source src="video1.mp4" type="video/mp4">
+			VIDEO NOT SUPPORTED BY BROWSER PLEASE UPGRADE!!
+		</video>
+		</br>
+		<button type="button" onclick="play()">Play</button>
+		<button type="button" onclick="pause()">Pause</button>
+	
+	</div>
+	
+<script>
+	function red()
+	{
+		document.getElementById("section1").setAttribute("style","background-color:red;");
+	}
+	function original()
+	{
+		document.getElementById("section1").setAttribute("style","background-color:white;");
+	}
+	function play()
+	{
+		var video = document.getElementById("v1");
+		video.play();
+	}
+	function pause()
+	{
+		var video = document.getElementById("v1");
+		video.pause();
+	}
+</script>
+
+</body>

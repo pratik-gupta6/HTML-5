@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset = "UTF-8">
+
+<title>
+Xena Events
+</title>
+<header align="center">
+<img src="icon.png"><font face="Brush Script MT" size="28" color="red">ena Events!!</font>
+</header>
+
+<body>
+	<p></br>
+	<h2>Enter your details to participate in the Hot Air Balloon Riding Event!!</h2>
+	</p>
+	<form name=hotairevent method="POST" onsubmit=validate()>
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" id="name" pattern="[a-zA-Z ]+" required ></td>
+			</tr>
+			<tr>
+				<td>Age:</td>
+				<td><input type="number" id="age" min=18 required></td>
+			</tr>
+			<tr>
+				<td>Email ID:</td>
+				<td><input type="email" id="email" required></td>
+			</tr>	
+			<tr>
+				<td>City:</td>
+				<td><input id="city" list="city1" name="city">
+					<datalist id="city1">
+						<option value = "Vizag">
+						<option value = "Banglore">
+						<option value = "Rajkot">
+					</datalist>
+				</td>
+			</tr>
+		</table>
+		</br>
+		<input type=submit value="Submit"></td>
+	</form>
+	
+	<script>
+	function validate()
+	{
+		n = document.getElementById("name").value;
+		a = document.getElementById("age").value;
+		e = document.getElementById("email").value;
+		c = document.getElementById("city").value;
+		alert(n+"::"+a+"::"+e+"::"+c);
+	}
+	</script>
+</body>

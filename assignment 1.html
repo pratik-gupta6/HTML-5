@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta charset = "UTF-8">
+
+<title>
+Stock Trading App!!
+</title>
+
+<body>
+<h1>Stock Trading App</h1>
+</br></br>
+
+<div>
+<h3>Avaiable stocks..</h3>
+<table border 1px>
+<tr>
+	<th>TICKER</th>
+	<th>PRICE</th>
+</tr>
+<tr>
+	<td>WIPRO</td>
+	<td>298.45</td>
+</tr>
+<tr>
+	<td>INFY</td>
+	<td>949.95</td>
+</tr>
+<tr>
+	<td>TCS</td>
+	<td>2713.70</td>
+</tr>
+<tr>
+	<td>TECHM</td>
+	<td>485.85</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h3>STOCK TRADING</h3>
+<form name=f1 method="POST" onsubmit=validation()>
+<table border 1px>
+<tr>
+	<td>Ticker:</td>
+	<td><input id="tick" list="tickers" name="ticker">
+		<datalist id="tickers">
+			<option value = "WIPRO">
+			<option value = "INFY">
+			<option value = "TCS">
+			<option value = "TECHM">
+		</datalist>
+	</td>
+</tr>
+<tr>
+	<td>Quantity:</td>
+	<td>
+		<input id="quant" type=number min=10 max=100 step=10>
+	</td>
+</tr>
+</table>
+</br>
+<input type=submit value="Submit Details">
+</form>
+</div>
+
+
+<script>
+function validation()
+{
+	var ticker=document.getElementById("tick").value;
+	var quantity=document.getElementById("quant").value;
+	var price=0;
+	if(""!=ticker)
+	{
+	if (ticker=="WIPRO")
+		price=298.5*quantity;
+	else if (ticker=="TCS")
+		price=949.95*quantity;
+	else if (ticker=="INFY")
+		price=2713.70*quantity;
+	else if (ticker=="TECHM")
+		price=485.85*quantity;
+	alert("You have successfully bought "+quantity+" shares for ticker '"+ticker+"' and net price to be paid is "+price);
+	}
+	else	
+		alert("Ticker Not Selected");
+}
+</script>
+</body>
